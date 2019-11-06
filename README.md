@@ -28,12 +28,13 @@ The exposed endpoints are these:
 
 Some things I would add or consider changing if I had more time:
 
--   Should be raising exceptions instead of returning error strings when appropriate
+-   I should be raising exceptions instead of returning error strings when appropriate
 -   I need to add a `TheatreShowings` or `TheatreSchedule` class to make gather all the showings for a given theatre and to make sure that only one showing is scheduled per timeslot
 -   I'd make things a bit more robust with some better input validation
 -   I would consider using ViewSets instead of just Views since they seem to provide some benefits
 -   I'd create an actual model for Ticket that had a unique ID and maybe some other details like `purchaseDate`
 -   I'm not especially fond of the `/theatres/<int:theatreId>/showings/<int:showingId>/tickets/` endpoint for purchasing tickets. It would make more sense if there user accounts and it could list purchased tickets for the current user as well as allow them to purchase tickets. In such a case I wouldn't put the `tickets` route under the `theatres/showings` route.
+-   The fact that it is so easy to add and run tests is really appealing. I've used frameworks before where it was a headache just to get started which made it more likely that tests would not be added
 
 ## Finally
 
