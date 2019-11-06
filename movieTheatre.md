@@ -15,3 +15,20 @@ From this I will make a few assumptions:
 > Tickets that are sold to customers
 
 1. There are no assigned seats. If a customer wants 2 tickets the system will not figure out if there are 2 adjacent seats available. Selling a ticket will simply decrement the number of available seats.
+
+## Constraints
+
+1. Two `Movies` cannot be scheduled in the same timeslot in the same `Theatre`
+2. You cannot issue more tickets than there are seats in a `Theatre`
+3. You cannot revoke more tickets than have actually been sold.
+4. You should not be able to reduce the number of seats in a Theatre after tickets have been sold.
+
+## Notes
+
+-   need a TheatreSchedule that connects Theatres to showings
+-   booking needs to be based on availability
+
+## Making a booking
+
+-   request a ticket based on theatre, movie, and timeslot
+-   Causes for failure: - timeslot, movie, or theatre don't exist - theatre is full - movie is not showing a specified timeslot and theatre
